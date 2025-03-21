@@ -6,10 +6,10 @@ import java.util.Scanner;
 public class Loops {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World\n");             //Τυπώνει Hello World
-		Scanner in = new Scanner(System.in);			 // Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη S
+		System.out.println("Hello World\n");                  //Τυπώνει Hello World
+		Scanner in = new Scanner(System.in);		      // Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη S
 		/*	Scanner s = new Scanner();  ----->           //2ος τρόπος να δουλέψει το Scanner()*/
-		String s=in.nextLine();							 //Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη S Τύπου String
+		String s=in.nextLine();				     //Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη S Τύπου String
 		
 /*---------------------------------------------------------------ΒΡΟΧΟΙ------------------------------------------------------------------------*/ 
 /*---------------------------------------------------------------IF----------------------------------------------------------------------------*/ 
@@ -21,40 +21,40 @@ public class Loops {
 /*---------------------------------------------------------------IF ELSE----------------------------------------------------------------------*/ 
 
 		System.out.println("\n---------IF-ELSE---------");
-		System.out.println("Tell us your name\n");         //Τυπώνει Hello World
-		Scanner name = new Scanner(System.in);			   // Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη S
-		String na=name.nextLine();						   //κάνει έλεγχο, αν του δώσω το όνομα Mike ή Nick μου λέει hello Mike/hello Nick,
+		System.out.println("Tell us your name\n");         	//Τυπώνει Hello World
+		Scanner name = new Scanner(System.in);			// Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη S
+		String na=name.nextLine();				//κάνει έλεγχο, αν του δώσω το όνομα Mike ή Nick μου λέει hello Mike/hello Nick,
 		if (na.equals("Nick")) {
 		  System.out.println("hello Nick");
 		} else if (na.equals("Mike")){
 		  System.out.println("hello Mike");
-		} else {											// αλλιως αν του δώσω αλλο όνομα λεει οτι δεν ειμαστε στην λίστα
+		} else {						// αλλιως αν του δώσω αλλο όνομα λεει οτι δεν ειμαστε στην λίστα
 		  System.out.println("Dear,"+na + " Your name is not on the list\n"); 
 		}
 		// Outputs "Good evening."
 		
 /*---------------------------------------------------------------FOR--------------------------------------------------------------------------*/ 
 
-		System.out.println("\n---------(FOR)--------- \nYou wrote: ");      //Τυπώνει "(if)You wrote: "
-	    	for (int i = 0; i < 5; i++) {									//for ---> τυπώνει αυτο που έγραψα 5 φορές
+		System.out.println("\n---------(FOR)--------- \n");      //Τυπώνει "(if)You wrote: "
+	    	for (int i = 0; i < 5; i++) {				 //for ---> τυπώνει αυτο που έγραψα 5 φορές
 	    		System.out.println(na+i);
 	    	}
 	    	
 /*---------------------------------------------------------------WHILE------------------------------------------------------------------------*/ 
 	    	
-		System.out.println("\n---------(WHILE)---------\nYou wrote: ");       //Τυπώνει "(while)You wrote: "
+		System.out.println("\n---------(WHILE)---------\n");       //Τυπώνει "(while)You wrote: "
 
 	    	int i=0;
-	    	while (i < 5) {													  //while --->τυπώνει αυτο που έγραψα 5 φορές
+	    	while (i < 5) {						   //while --->τυπώνει αυτο που έγραψα 5 φορές
 	    		  System.out.println(na+i);
 	    		  i++;
 	    		}
 	    	
 /*---------------------------------------------------------------DO-WHILE---------------------------------------------------------------------*/ 
 	    	
-		System.out.println("\n---------(DO-WHILE)---------\nYou wrote: ");    
+		System.out.println("\n---------(DO-WHILE)---------\n");    
 
-	    	int j = 0;														  //do while --->τυπώνει αυτο που έγραψα 5 φορές
+	    	int j = 0;						 //do while --->τυπώνει αυτο που έγραψα 5 φορές
 	    	do {
 	    		  System.out.println(na+i);
 	    	  j++;
@@ -63,9 +63,11 @@ public class Loops {
 
 /*---------------------------------------------------------------SWITCH------------------------------------------------------------------------*/ 
 
-		System.out.println("\n---------(SWITCH)---------\nYou wrote: ");    
-
-	    	int day = 4;
+		System.out.println("\n---------(SWITCH)---------\nGive me a number: ");    
+		Scanner number = new Scanner(System.in);			 		 
+		String dayStr=number.nextLine();			//Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη dayStr
+		int day = Integer.parseInt(dayStr);			//Μετατρέπει το dayStr σε integer
+	    	
 	    	switch (day) {
 	    	  case 1:
 	    	    System.out.println("Monday");
@@ -96,7 +98,8 @@ public class Loops {
 /*-------------------------------------------------------ΤΕΛΟΣ ΤΩΝ ΒΡΟΧΩΝ-----------------------------------------------------------------------*/	    
 	    	
 	    	
-	    in.close();                                    //κλείνω το Scanner για να μη καταναλώνει τζαμπα μνήμη
+	    in.close();                                   						 //κλείνω το Scanner για να μη καταναλώνει τζαμπα μνήμη
 	}
 
 }
+
