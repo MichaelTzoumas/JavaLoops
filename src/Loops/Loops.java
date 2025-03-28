@@ -67,7 +67,9 @@ public class Loops {
 		Scanner number = new Scanner(System.in);			 		 
 		String dayStr=number.nextLine();			//Παίρνει δεδομένα απο το πληκτρολόγιο και τα βάζει στην μεταβλητη dayStr
 		int day = Integer.parseInt(dayStr);			//Μετατρέπει το dayStr σε integer
-	    	
+	    	/* Ένας άλλος τρόπος ειναι να παρω δεδομένα Integer απευθειας απο το πλητρολόγιο 
+      		int day=nextInt(); */
+
 	    	switch (day) {
 	    	  case 1:
 	    	    System.out.println("Monday");
